@@ -26,10 +26,14 @@ namespace employeeLabTask
             }
         }
 
-        public decimal EmployeeTest()
+        public string GetAnnualSalary()
         {
-            return Convert.ToDecimal(Salary * 12);
+            return $"{FirstName} {LastName}\n Annual Salary -{(Salary * 12):C}\n";
         }
         
+        public void Give10Raise()
+        {
+           Salary= Salary * 0.1m + Salary;
+        }
     }
 }
